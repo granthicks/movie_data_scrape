@@ -57,7 +57,7 @@ def parse_and_extract(url, name='2020'):
     df = pd.DataFrame(table_data, columns=header_names)
     # df = pd.DataFrame(table_data_dicts)
     path = os.path.join(BASE_DIR, 'data')
-    filepath = os.path.join('data', f'{name}')
+    filepath = os.path.join('data', f'{name}.csv')
     os.makedirs(path, exist_ok=True)
     df.to_csv(filepath, index=False)
     return True
